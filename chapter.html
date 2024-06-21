@@ -14,6 +14,8 @@
     <nav class="navbar navbar-expand-lg p-3 bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">Bhagvat Gita</a>
+            <button class="btn mx-2 btn-dark" id="theme-toggle">Dark</button>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -34,7 +36,6 @@
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit" disabled>Search</button>
                 </form>
-                <button class="btn mx-2 btn-dark" id="theme-toggle">Dark</button>
 
             </div>
         </div>
@@ -72,19 +73,16 @@
                     <h1 id="chapter-name" class="fw-bold">
                         Chapter name
                     </h1>
-                    <h5 id="chapter-content" class="px-5" style="text-align: justify;">
+                    <h5 id="chapter-content" style="text-align: justify;">
                         Chapter content
                     </h5>
                 </div>
                 <hr>
-                <div class="container-fluid d-flex justify-content-between">
+                <div class="container-fluid">
                     <h5 id="total-verse" class="fw-bolder">
 
                     </h5>
-                    <form class="d-flex gap-2" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+                   
                 </div>
                 <hr>
                 <div class="container">
@@ -109,8 +107,8 @@
         document.getElementById('main-panel').style.display = "flex";
         document.querySelector('.overlay').style.display = 'block';
         document.querySelector('.overlay').addEventListener('click', hidePage);
-        showVerse(1);
     });
+    showVerse(1);
 
     window.onload = loadData;
     function getQueryParameter(name) {

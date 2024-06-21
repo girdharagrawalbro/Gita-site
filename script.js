@@ -169,7 +169,7 @@ function loadData() {
                             <div style="width:200px">
                                  <h6 style="color: orangered;">VERSE ${element.verse_number}</h6>
                             </div>
-                            <div style="width:900px">
+                            <div id="verse-content">
                                  ${firstTranslationDescription}   
                             </div>
                         </li>`;
