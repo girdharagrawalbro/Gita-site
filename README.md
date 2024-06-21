@@ -66,7 +66,7 @@ This project is licensed under the MIT License. See the `LICENSE` file for detai
 
 ## Link to Website
 
-Visit the Bhagavad Gita website here: [Bhagavad Gita Website](https://[your-link-here])
+Visit the Bhagavad Gita website here: [Bhagavad Gita Website](https://bhagvat-gite.netlify.app/)
 
 ---
 
