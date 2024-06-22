@@ -61,7 +61,7 @@ function loadVersemenu() {
                 // Parse the JSON response
                 var jsonResponse = JSON.parse(xhr3.responseText);
                 jsonResponse.forEach(element => {
-                    chapter_menu.innerHTML += `<li id="chap-verse-menu" onclick="showVerse(${element.chapter_number})">
+                    chapter_menu.innerHTML += `<li onclick="showVerse(${element.chapter_number})">
                                Chapter - ${element.chapter_number}
                         </li> 
                         `;
@@ -166,7 +166,7 @@ function loadData() {
                     }
                     const verseItem = `
                         <li class="d-flex align-items-center">
-                            <div style="width:200px">
+                            <div style="width:240px">
                                  <h6 style="color: orangered;">VERSE ${element.verse_number}</h6>
                             </div>
                             <div id="verse-content">
