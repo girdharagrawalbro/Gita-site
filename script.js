@@ -1,29 +1,22 @@
 function setTheme(theme) {
     document.documentElement.setAttribute('data-bs-theme', theme);
 }
-
 // Function to toggle the theme and store the new theme in localStorage
 function toggleTheme() {
     const currentTheme = document.documentElement.getAttribute('data-bs-theme');
     const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
     localStorage.setItem('theme', newTheme);
-
     // Change the button text based on the new theme
     document.getElementById('theme-toggle').innerText = newTheme === 'light' ? 'Dark' : 'Light';
 }
-
 // Set the initial theme based on the value in localStorage
 const savedTheme = localStorage.getItem('theme') || 'light';
 setTheme(savedTheme);
-
 // Set the initial text of the button based on the saved theme
 document.getElementById('theme-toggle').innerText = savedTheme === 'light' ? 'Dark' : 'Light';
-
 // Event listener for button click to toggle theme
 document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
-
-
 function loadChaptersmenu() {
     const data = null;
     const xhr3 = new XMLHttpRequest();
@@ -76,7 +69,6 @@ function loadVersemenu() {
     xhr3.setRequestHeader('x-rapidapi-host', 'bhagavad-gita3.p.rapidapi.com');
     xhr3.send(data);
 }
-
 function showVerse(chap) {
     const data = null;
     const xhr4 = new XMLHttpRequest();
@@ -106,9 +98,6 @@ function showVerse(chap) {
     xhr4.setRequestHeader('x-rapidapi-host', 'bhagavad-gita3.p.rapidapi.com');
     xhr4.send(data);
 }
-
-
-
 function loadData() {
     let loadingBar = document.getElementById('loadingBar');
     let loadingBarContainer = document.getElementById('loadingBarContainer');
@@ -200,8 +189,6 @@ function openChap(chap) {
 function openVerse(verse) {
     window.location.href = `verse.html?chapter=${chap_no}&verse=${verse}`;
 }
-
-
 function hidePage() {
     document.querySelector('.overlay').style.display = 'none';
     document.getElementById('main-panel').style.display = "none";
