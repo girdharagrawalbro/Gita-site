@@ -114,6 +114,7 @@
     function loadVerse() {
         let loadingBar = document.getElementById('loadingBar');
         let loadingBarContainer = document.getElementById('loadingBarContainer');
+        loadingBar.style.width = '10%';
         let main = document.getElementById('main');
         let loading = document.getElementById('loading-img');
         loading.style.display = "flex";
@@ -121,6 +122,7 @@
         const data = null;
         const xhr5 = new XMLHttpRequest();
         xhr5.withCredentials = true;
+
         const verse_no = document.getElementById('verse-no');
         const verse_text = document.getElementById('verse-text');
         const verse_translation = document.getElementById('verse-translation');
@@ -129,19 +131,16 @@
         const verse_commentry = document.getElementById('commentry');
         xhr5.onreadystatechange = function () {
             if (xhr5.readyState === XMLHttpRequest.OPENED) {
-                loadingBar.style.width = '25%';
-            } else if (xhr5.readyState === XMLHttpRequest.HEADERS_RECEIVED) {
                 loadingBar.style.width = '50%';
-            } else if (xhr5.readyState === XMLHttpRequest.LOADING) {
-                loadingBar.style.width = '75%';
-            } else if (xhr5.readyState === XMLHttpRequest.DONE) {
+            }
+             else if (xhr5.readyState === XMLHttpRequest.DONE) {
                 loadingBar.style.width = '100%';
                 try {
                     main.style.display = "block";
                     loading.style.display = "none";
                     loadingBarContainer.style.display = "none";
                     const jsonResponse = JSON.parse(xhr5.responseText);
-                    // console.log(jsonResponse);
+                    console.log(jsonResponse);
                     verse_no.innerText = `BG ${chap_number}.${jsonResponse.verse_number}`;
                     verse_text.innerText = jsonResponse.text;
                     transliteration.innerText = jsonResponse.transliteration;

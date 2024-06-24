@@ -105,12 +105,12 @@ function loadData() {
     let loading = document.getElementById('loading-img');
     loading.style.display = "flex";
     main.style.display = "none";
-    let width = 0;
     const data = null;
     const xhr1 = new XMLHttpRequest();
     xhr1.withCredentials = true;
     const xhr2 = new XMLHttpRequest();
     xhr2.withCredentials = true;
+    let width = 5;
     const chapter_no = document.getElementById('chapter-no');
     const chapter_name = document.getElementById('chapter-name');
     const chapter_content = document.getElementById('chapter-content');
