@@ -2,6 +2,7 @@
 
 Welcome to the Bhagavad Gita website! This site presents all chapters and verses of the Bhagavad Gita in a user-friendly format. The site is built using HTML, CSS, JavaScript, and Bootstrap for responsive design.
 
+Live in [https://bhagvat-gite.netlify.app/]
 ## Features
 
 - Complete text of the Bhagavad Gita with all chapters and verses.
